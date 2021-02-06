@@ -1,0 +1,93 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+select, option {
+  color: black;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgba(25, 55, 121, 0.87);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 60%;
+  margin: auto;
+  max-width: 1300px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 2em;
+}
+
+.ingredientes {
+  text-align: center;
+}
+
+.ingredientes__add {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+}
+
+.ingredientes__add input {
+  font-size: 2em;
+  border: none;
+  text-align: center;
+  color: black;
+  width: 60%;
+}
+
+.ingredientes__add select {
+  margin: 1em 0;
+}
+
+.ingredientes__container {
+  margin: 3em auto;
+  width: 50%;
+}
+
+.ingredientes__select {
+  width: 20%;
+}
+
+.btn--add {
+  color: black;
+  font-weight: bold;
+}
+
+.btn--cart {
+  color: black;
+}
+
+.ingredientes--add {
+  font-size: 1.3em;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5em 0;
+}
+
+.trash-icon {
+  color: red;
+  cursor: pointer;
+}

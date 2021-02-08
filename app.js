@@ -6,7 +6,7 @@ let btnCart = $(".btn--cart")
 let btnTrash = $(".trash-icon");
 let arrayIngredientes = [];
 let pedidos = [];
-let burgerName = $("#burgerName").value;
+let burgerName = $("input#burgerName");
 
 // Cargo los ingredientes dentro del select
 $(window).on("DOMContentLoaded", (event) => {
@@ -30,27 +30,16 @@ btnAdd.click((e) => {
 // Al apretar el boton se añaden todos los ingredientes al carrito
 btnCart.click((e) => { 
   e.preventDefault();
-  arrayIngredientes = [{
-    "name" : "",
-    "ingredientes" : ""
-  }];
+  let ingredientesIntoArray = [];
   for(let i = 0; i<$(".p--ingrediente").length; i++){
     let textIn = $(".p--ingrediente")[i].textContent;
-    arrayIngredientes.ingredientes.push(textIn);
-    arrayIngredientes.name.push(burgerName);
+    ingredientesIntoArray.push(`${textIn}`);
   }
-  if(arrayIngredientes.length != 0) {
-    pedidos.push(arrayIngredientes);
-  }
+  pedidos.push({
+    "name" : `${burgerName.val()}`,
+    "ingredientes" : `${ingredientesIntoArray}`
+  });
   acumuladora = "";
   ingredientes__container.html(acumuladora);
-  console.log(pedidos);
+  localStorage.setItem("Pedidos", pedidos);
 });
-
-  for(let i = 0; i<$(".trash-icon").length; i++){
-    console.log($(".trash-icon")[i]);
-    $(".trash-icon")[i].click((e) => {
-      e.preventDefault();
-      console.log("A")
-    })
-  }

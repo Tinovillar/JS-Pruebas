@@ -1,12 +1,11 @@
-let ingredientes__select = $("#ingredientes");
-let ingredientes__container = $(".ingredientes__container");
-let btnAdd = $(".btn--add");
-let acumuladora = "";
-let btnCart = $(".btn--cart")
-let btnTrash = $(".trash-icon");
-let arrayIngredientes = [];
-let pedidos = [];
-let burgerName = $("input#burgerName");
+let ingredientes__select = $("#ingredientes"),
+    ingredientes__container = $(".ingredientes__container"),
+    btnAdd = $(".btn--add"),
+    acumuladora = "",
+    btnCart = $(".btn--cart")
+    btnTrash = $(".trash-icon"),
+    pedidos = [],
+    burgerName = $("input#burgerName");
 
 // Cargo los ingredientes dentro del select
 $(window).on("DOMContentLoaded", (event) => {
@@ -24,7 +23,7 @@ btnAdd.click((e) => {
     <p class="p--ingrediente">${ingredientes__select.val()}</p>
     <i class="far fa-trash-alt trash-icon"></i>
   </div>`;
-    ingredientes__container.html(acumuladora);
+  ingredientes__container.html(acumuladora);
 });
 
 // Al apretar el boton se añaden todos los ingredientes al carrito
@@ -34,6 +33,7 @@ btnCart.click((e) => {
   for(let i = 0; i<$(".p--ingrediente").length; i++){
     let textIn = $(".p--ingrediente")[i].textContent;
     ingredientesIntoArray.push(`${textIn}`);
+    console.log(textIn)
   }
   pedidos.push({
     "name" : `${burgerName.val()}`,
@@ -41,5 +41,8 @@ btnCart.click((e) => {
   });
   acumuladora = "";
   ingredientes__container.html(acumuladora);
+  burgerName.val("");
   localStorage.setItem("Pedidos", pedidos);
+
+  console.log(pedidos);
 });

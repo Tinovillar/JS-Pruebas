@@ -9,9 +9,11 @@
 </head>
 <body>
   <h1>Crea tu Hamburguesa</h1>
+  <p class="subTitle">Agrega los ingredientes en orden</p>
+  <h2 class="cart"><span class="span_n"></span><i class="fas fa-shopping-cart"></i></h2>
   <div class="ingredientes">
     <div class="ingredientes__add">
-      <input type="text" name="burgerName" id="burgerName" placeholder="...">
+      <input type="text" name="burgerName" id="burgerName" placeholder="..." required>
       <select name="ingredientes" id="ingredientes" class="ingredientes__select">
       </select>
       <button class="btn--add">Agregar ingrediente</button>
@@ -19,12 +21,13 @@
     <div class="ingredientes__container">
       <!-- Ingredientes -->
     </div>
-    <button class="btn--cart">Añadir al Carrito</button>
+    <button class="ing--reset" type="submit">Resetear Ingredientes</button>
+    <button class="btn--cart" type="submit">Añadir al Carrito</button>
   </div>
 
     <script src="https://kit.fontawesome.com/bf9ab30dbe.js" crossorigin="anonymous"></script>
     <script src="./jQuery.js"></script>
-    <script src="./ingredients.js"></script>
-    <script src="./app.js"></script>
+    <script src="./api.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>

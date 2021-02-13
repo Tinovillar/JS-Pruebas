@@ -1,66 +1,84 @@
-const ingredients = [{
+[{
     "id" : "01" ,
     "name" : "lechuga" ,
     "vegano" : "true" ,
-    "vegetariano" : "true"
+    "vegetariano" : "true",
+    "precio" : "75"
 } ,
 {
     "id" : "02" ,
     "name" : "hamburguesa de pollo" ,
     "vegano" : "false" ,
-    "vegetariano" : "false"
+    "vegetariano" : "false",
+    "precio" : "75"
 } ,
 {
     "id" : "03" ,
     "name" : "hamburguesa de carne" ,
     "vegano" : "false" ,
-    "vegetariano" : "false"
+    "vegetariano" : "false",
+    "precio" : "75"
 } ,
 {
     "id" : "04" ,
     "name" : "hamburguesa de pescado" ,
     "vegano" : "false" ,
-    "vegetariano" : "false"
+    "vegetariano" : "false",
+    "precio" : "75"
 } ,
 {
     "id" : "05" ,
     "name" : "hamburguesa de lentejas" ,
     "vegano" : "true" ,
-    "vegetariano" : "true"
+    "vegetariano" : "true",
+    "precio" : "75"
 } ,
 {
     "id" : "06" ,
     "name" : "hamburguesa de calabaza" ,
     "vegano" : "true" ,
-    "vegetariano" : "true"
+    "vegetariano" : "true",
+    "precio" : "75"
 } ,
 {
     "id" : "07" ,
     "name" : "tomate" ,
     "vegano" : "true" ,
-    "vegetariano" : "true"
+    "vegetariano" : "true",
+    "precio" : "75"
 } ,
 {
     "id" : "08" ,
     "name" : "cebolla" ,
     "vegano" : "true" ,
-    "vegetariano" : "true"
+    "vegetariano" : "true",
+    "precio" : "75"
 } ,
 {
     "id" : "09" ,
     "name" : "queso" ,
     "vegano" : "false" ,
-    "vegetariano" : "true"
+    "vegetariano" : "true",
+    "precio" : "75"
 } ,
 {
     "id" : "10" ,
     "name" : "queso chedar" ,
     "vegano" : "false" ,
-    "vegetariano" : "true"
+    "vegetariano" : "true",
+    "precio" : "75"
 } ,
 {
     "id" : "11" ,
     "name" : "panceta" ,
     "vegano" : "false" ,
-    "vegetariano" : "false"
+    "vegetariano" : "false",
+    "precio" : "75"
+},
+{
+    "id" : "12" ,
+    "name" : "queso vegano" ,
+    "vegano" : "true" ,
+    "vegetariano" : "true",
+    "precio" : "75"
 }]

@@ -35,6 +35,11 @@ html {
 h1 {
   text-align: center;
   font-size: 3em;
+}
+
+.subTitle {
+  text-align: center;
+  font-size: 1.3em;
   margin-bottom: 2em;
 }
 
@@ -55,10 +60,13 @@ h1 {
   text-align: center;
   color: black;
   width: 60%;
+  padding: 0.1em;
 }
 
 .ingredientes__add select {
   margin: 1em 0;
+  border: none;
+  padding: 0.2em;
 }
 
 .ingredientes__container {
@@ -67,16 +75,12 @@ h1 {
 }
 
 .ingredientes__select {
-  width: 20%;
+  width: 30%;
 }
 
-.btn--add {
+.btn--add, .ing--reset, .btn--cart{
   color: black;
   font-weight: bold;
-}
-
-.btn--cart {
-  color: black;
 }
 
 .ingredientes--add {
@@ -90,4 +94,10 @@ h1 {
 .trash-icon {
   color: red;
   cursor: pointer;
+}
+
+.cart {
+  position: fixed;
+  top: 5px;
+  left: 5px;
 }

@@ -101,3 +101,21 @@ h1 {
   top: 5px;
   left: 5px;
 }
+
+.pedidos__container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+}
+
+
+.pedidos__btn button{
+  font-size: 1.3em;
+  color: black;
+  font-weight: bold;;
+}
+
+.pedidos__btn {
+  margin: auto;
+  text-align: center;
+}

@@ -19,21 +19,25 @@ class Carrito {
   cargarPedidos() {
     if(localStorage.getItem('pedidos')) {   
         pedidos = $.parseJSON(localStorage.getItem('pedidos'));
-      }
-    for(let i of pedidos){
+        for(let i of pedidos){
+          $('.pedidos__container').append(`
+          <div class="pedido--tarjeta">
+              <h3 class="h3--name">${i.name}</h3>
+              <p class="p--ing">${i.ingredientes}</p>
+              <p class="p--precio">${i.precio}</p>
+              <i class="far fa-trash-alt trash-icon"></i>
+          </div>`);
+          TOTAL += parseInt(i.precio);
+        }
+    } else {
       $('.pedidos__container').append(`
-      <div class="pedido--tarjeta">
-          <h3 class="h3--name">${i.name}</h3>
-          <p class="p--ing">${i.ingredientes}</p>
-          <p class="p--precio">${i.precio}</p>
-          <i class="far fa-trash-alt trash-icon"></i>
-      </div>`);
-      TOTAL += parseInt(i.precio);
+        <h3>Lo siento, aun no agregaste nada. Regresa y arma tu hamburguesa personalizada</h3>
+      `)
     }
     this.refresh();
   }
 
-  eliminarPedido() {
+  eliminarPedido(e) {
     if(e.target.classList.contains('trash-icon')){
       $(e.target.parentNode).remove();
       TOTAL -= parseInt(e.target.parentNode.children[2].textContent);

@@ -17,7 +17,7 @@ $('.btn--comprar').click( (e) => {
 
 $('.pedidos__container').click((e) => {
   e.preventDefault();
-  carrito.eliminarPedido();
+  carrito.eliminarPedido(e);
 })
 
 /////////////////////////////////////

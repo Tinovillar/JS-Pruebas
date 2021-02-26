@@ -29,11 +29,8 @@ class Carrito {
           </div>`);
           TOTAL += parseInt(i.precio);
         }
-    } else {
-      $('.pedidos__container').append(`
-        <h3>Lo siento, aun no agregaste nada. Regresa y arma tu hamburguesa personalizada</h3>
-      `)
     }
+
     this.refresh();
   }
 
@@ -59,8 +56,12 @@ class Carrito {
     }
     this.refresh();
   }
-
   refresh() {
+    if($('.pedidos__container').children().length == 0){
+      $('.pedidos__container').append(`
+      <h3 class="h3--carrito">Lo siento, aun no agregaste nada. Regresa y arma tu hamburguesa personalizada</h3>
+      `)
+    }
     $('.span_n').html(`(${pedidos.length})`);
     $('.btn--comprar').text(`Comprar: $${TOTAL}`);
   }

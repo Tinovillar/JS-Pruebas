@@ -8,12 +8,18 @@
   <title>Arma tu Hamburguesa</title>
 </head>
 <body>
+  <nav>
+    <ul class="ul">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="carrito.html"><span class="span_n"></span><i class="fas fa-shopping-cart"></i></a></li>
+    </ul>
+  </nav>
   <h1>Crea tu Hamburguesa</h1>
   <p class="subTitle">Agrega los ingredientes en orden</p>
-  <a href="carrito.html"><h2 class="cart"><span class="span_n"></span><i class="fas fa-shopping-cart"></i></h2></a>
   <div class="ingredientes">
     <div class="ingredientes__add">
-      <input type="text" name="burgerName" id="burgerName" placeholder="..." required>
+      <input type="text" name="burgerName" id="burgerName" placeholder="Hamburguesa" required>
       <select name="ingredientes" id="ingredientes" class="ingredientes__select">
       </select>
       <button class="btn--add">Agregar ingrediente</button>

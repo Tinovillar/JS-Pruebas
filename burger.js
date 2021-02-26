@@ -8,7 +8,7 @@ class Burger {
     </div>`);
   }
 
-  eliminarIng() {
+  eliminarIng(e) {
     if(e.target.classList.contains('trash-icon')){ //al pulsarlo devuelve un true
       $(e.target.parentNode).remove(); //busca el elemento padre del objeto clickeado y lo elimina
     }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Arma tu Hamburguesa</title>
+</head>
+<body>
+  <nav>
+    <ul class="ul">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="carrito.html"><span class="span_n"></span><i class="fas fa-shopping-cart"></i></a></li>
+    </ul>
+  </nav>
+  <div class="contacto">
+    <div class="contacto__title">
+        <h2>Contactanos!</h2>
+    </div>
+    
+    <div class="contacto__formulario">
+        <div class="formulario__form">
+            <form action="">
+                <div>
+                    <label>Nombre <span class="required--rojo">(requerido)</span></label>
+                    <input type="text" name="nombre" required>
+                </div>
+                <div>
+                    <label>Email <span class="required--rojo">*</span></label>
+                    <input type="email" name="email" required>
+                </div>
+                <div>
+                    <label>Celular</label>
+                    <input type="tel" name="celular">
+                </div>
+                <div>
+                    <label>Asunto <span class="required--rojo">*</span></label>
+                    <input type="text" name="asunto" required>
+                </div>
+                <div class="formulario__block">
+                    <label>Mensaje <span class="required--rojo">*</span></label> 
+                    <textarea name="message" rows="3" required></textarea>
+                </div>
+                <div class="formulario__block">
+                    <button>Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+    <script src="https://kit.fontawesome.com/bf9ab30dbe.js" crossorigin="anonymous"></script>
+    <script src="./jQuery.js"></script>
+    <script src="./api.js"></script>
+    <script src="./cart.js"></script>
+    <script src="./burger.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

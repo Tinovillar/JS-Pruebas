@@ -32,7 +32,7 @@ $('.btn--add').click((e) => {
 
 $('.ingredientes__container').click((e) => {
   e.preventDefault();
-  burger.eliminarIng();
+  burger.eliminarIng(e);
 })
 
 $('.btn--cart').click((e) => {

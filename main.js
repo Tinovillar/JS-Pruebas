@@ -1,30 +1,24 @@
-let ingAdd = $('.btn--add');
-let ingRemove = $('.trash-icon');
-let ingReset = $('.ing--reset')
-let ingContainer = $('.ingredientes__container');
-let ingSelect = $('#ingredientes');
-let cartAdd = $('.btn--cart');
 let pedidos = [];
 
 // Al apretar el boton, muestra el ingrediente
-ingAdd.click((e) => { 
+$('.btn--add').click((e) => { 
     e.preventDefault();
-    ingContainer.append(`
+    $('.ingredientes__container').append(`
     <div class="ingredientes--add">
-        <p class="p--ingrediente">${ingSelect.val()}</p>
+        <p class="p--ingrediente">${$('#ingredientes').val()}</p>
         <i class="far fa-trash-alt trash-icon"></i>
     </div>`);
 });
 
 // Al hacer click en el tacho de basura, el ingrediente se elimina
-ingContainer.click((e) => {
+$('.ingredientes__container').click((e) => {
     e.preventDefault();
     if(e.target.classList.contains('trash-icon')){ //al pulsarlo devuelve un true
         $(e.target.parentNode).remove(); //busca el elemento padre del objeto clickeado y lo elimina
     }
 })
 
-cartAdd.click((e) => {
+$('.btn--cart').click((e) => {
     e.preventDefault();
     arrIn = [];
     let precioBurger = 0;
@@ -55,18 +49,17 @@ cartAdd.click((e) => {
     console.log(pedidos)
 });
 // Resetea el carrito
-ingReset.click((e) => {
+$('.ing--reset').click((e) => {
     e.preventDefault()
-    ingContainer.children().remove();
+    $('.ingredientes__container').children().remove();
     $('#burgerName').val('');
 })
 
 // Carga los pedidos desde el local storage
 $(document).on('DOMContentLoaded', (e) => {
     e.preventDefault();
-    $('.span_n').html(`(${pedidos.length})`);
     if(localStorage.getItem('pedidos')) {   
         pedidos = $.parseJSON(localStorage.getItem('pedidos'));
-        $('.span_n').html(`(${pedidos.length})`);
     }
+    $('.span_n').html(`(${pedidos.length})`);
 })
